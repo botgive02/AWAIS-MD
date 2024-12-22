@@ -1,4 +1,3 @@
-
 const {
 default: makeWASocket,
 useMultiFileAuthState,
@@ -28,6 +27,7 @@ const { tmpdir } = require('os')
 const Crypto = require('crypto')
 const path = require('path')
 const prefix = config.PREFIX
+
 const ownerNumber = ['923182832887']
 
 //===================SESSION-AUTH============================
@@ -38,7 +38,7 @@ const filer = File.fromURL(`https://mega.nz/file/${sessdata}`)
 filer.download((err, data) => {
 if(err) throw err
 fs.writeFile(__dirname + '/auth_info_baileys/creds.json', data, () => {
-console.log("SESSION DOWNLOADED COMPLETED ✅")
+console.log("Session downloaded ✅")
 })})}
 
 const express = require("express");
@@ -48,7 +48,7 @@ const port = process.env.PORT || 9090;
 //=============================================
 
 async function connectToWA() {
-console.log("CONNECTING AWAIS BOT 🎭...");
+console.log("Connecting AWAIS MD BOT ⏳️...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
 
@@ -68,42 +68,24 @@ if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
 connectToWA()
 }
 } else if (connection === 'open') {
-console.log('♻️ INSTALLING PLUGINS FILES PLEASE WAIT... 🪄')
+console.log('🧬 Installing')
 const path = require('path');
 fs.readdirSync("./plugins/").forEach((plugin) => {
 if (path.extname(plugin).toLowerCase() == ".js") {
 require("./plugins/" + plugin);
 }
 });
-console.log('PLUGINS FILES INSTALL SUCCESSFULLY ✅')
-console.log('AWAIS MD CONNECTED TO WHATSAPP ENJOY ✅')
+console.log('Plugins installed successful ✅')
+console.log('Bot connected to whatsapp ✅')
 
-let up = `*╭──────────────●●►*
-> *Awais Mᴅ Cᴏɴɴᴇᴄᴛᴇᴅ Sᴜᴄᴄᴇssғᴜʟʏ Tʏᴘᴇ .Mᴇɴᴜ Tᴏ Gᴇᴛ Cᴏᴍᴍᴀɴᴅ Lɪsᴛ Cʀᴇᴀᴛᴇᴅ Bʏ ᴀᴡᴀɪs ᴍᴅ*
-
-> *Jᴏɪɴ Oᴜʀ Wʜᴀᴛsᴀᴘᴘ Cʜᴀɴɴᴇʟ Fᴏʀ Uᴘᴅᴀᴛᴇs Oꜰ Awais Mᴅ*
-
-*https://whatsapp.com/channel/0029VashGieHAdNP11OHXH3P*
-
-> *Fᴏʟʟᴏᴡ Uꜱ Oɴ Iɴꜱᴛᴀɢʀᴀᴍ*
-
-*https://Instagram.com/um4rxd*
-
-*╭⊱✫ AWAIS MD ✫⊱╮*
-*│✫➠ - 📂REPOSITORY NAME:* *AWAIS MD*
-*│✫➠ - 📃DESCRIPTION:* *PAKISTANI BEST BOT*
-*│✫➠ - 🛡️OWNER:* *AWAIS MD*
-*│✫➠ - 🌐URL:* *https://github.com/Awais-star-a11y/AWAIS-MD*
-
-*YOUR BOT ACTIVE NOW ENJOY♥️🪄*\n\n*PREFIX: ${prefix}*
-
-*╰──────────────●●►*`;
-conn.sendMessage(conn.user.id, { image: { url: `https://endpoint.web.id/server/file/8Cmyffly1bMBLr.jpg` }, caption: up })
-
+let up = `*╭──────────────●●►*\n> *Awais Mᴅ Cᴏɴɴᴇᴄᴛᴇᴅ Sᴜᴄᴄᴇssғᴜʟʏ Tʏᴘᴇ .Mᴇɴᴜ Tᴏ Gᴇᴛ Cᴏᴍᴍᴀɴᴅ Lɪsᴛ Cʀᴇᴀᴛᴇᴅ Bʏ ᴀᴡᴀɪs ᴍᴅ*\n\n> *Jᴏɪɴ Oᴜʀ Wʜᴀᴛsᴀᴘᴘ Cʜᴀɴɴᴇʟ Fᴏʀ Uᴘᴅᴀᴛᴇs Oꜰ Awais Mᴅ*\n\n*https://whatsapp.com/channel/0029VashGieHAdNP11OHXH3P*\n\n> *Fᴏʟʟᴏᴡ Uꜱ Oɴ Iɴꜱᴛᴀɢʀᴀᴍ*\n\n*https://Instagram.com/um4rxd*\n\n*╭⊱✫ AWAIS MD ✫⊱╮*\n*│✫➠ - \ud83d\udcc2REPOSITORY NAME:* *AWAIS MD*\n*│✫➠ - \ud83d\udcc3DESCRIPTION:* *PAKISTANI BEST BOT*\n*│✫➠ - \ud83d\udee1️OWNER:* *AWAIS MD*\n*│✫➠ - \ud83c\udf10URL:* *https://github.com/Awais-star-a11y/AWAIS-MD*\n\n*YOUR BOT ACTIVE NOW ENJOY♥️*\n\n*PREFIX: ${prefix}*\n\n*╰──────────────●●►*`;
+conn.sendMessage(conn.user.id, { image: { url: `https://qu.ax/QkpAj.jpg` }, caption: up })
 }
 })
 conn.ev.on('creds.update', saveCreds)  
-
+        
+//=============readstatus=======
+      
 conn.ev.on('messages.upsert', async(mek) => {
   mek = mek.messages[0]
   if (!mek.message) return
@@ -115,7 +97,7 @@ if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_STATUS_RE
 const user = mek.key.participant
 const text = `${config.AUTO_STATUS__MSG}`
 await conn.sendMessage(user, { text: text, react: { text: '💜', key: mek.key } }, { quoted: mek })
-}
+          }
 const m = sms(conn, mek)
 const type = getContentType(mek.message)
 const content = JSON.stringify(mek.message)
@@ -166,7 +148,41 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
                 return conn.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options }, { quoted: quoted, ...options })
               }
             }
-//================ownerreact
+//Auto Read Msg
+conn.ev.on('messages.upsert', async (mek) => {
+    try {
+        mek = mek.messages[0];
+        if (!mek.message) return;
+
+        // Handle ephemeral messages
+        mek.message = (getContentType(mek.message) === 'ephemeralMessage') 
+            ? mek.message.ephemeralMessage.message 
+            : mek.message;
+
+        // Auto-read functionality
+        if (config.READ_MESSAGE === 'true') {
+            await conn.readMessages([mek.key]);  // Mark message as read
+            console.log(`Marked message from ${mek.key.remoteJid} as read.`);
+        }
+
+        // Continue with your existing message processing logic here...
+        const m = sms(conn, mek);
+        const type = getContentType(mek.message);
+        const content = JSON.stringify(mek.message);
+        const from = mek.key.remoteJid;
+        const isGroup = from.endsWith('@g.us');
+        const sender = mek.key.fromMe 
+            ? conn.user.id.split(':')[0] + '@s.whatsapp.net' 
+            : mek.key.participant || mek.key.remoteJid;
+
+        // More code...
+    } catch (err) {
+        console.error('Error in message handler:', err);
+    }
+});
+        
+//================ownerreact==============
+
 if(senderNumber.includes("923182832887")){
 if(isReact) return
 m.react("👑")
@@ -180,8 +196,8 @@ m.react("👑")
 if(senderNumber.includes("923182832887")){
 if(isReact) return
 m.react("🦋")
-   }
-//==========================public react===============//
+ }
+//==========public react============//
 // Auto React 
 if (!isReact && senderNumber !== botNumber) {
     if (config.AUTO_REACT === 'true') {
@@ -200,28 +216,31 @@ if (!isReact && senderNumber === botNumber) {
         m.react(randomOwnerReaction);
     }
 }
-   //====================================================================
-
-        if(config.AUTO_VOICE == 'true' ) {
-  const url = 'https://raw.githubusercontent.com/Um4r719/UD-MD-DATABASE/refs/heads/main/UMAR_VOICE/CONNECTOR/UD-MD'
-  let { data } = await axios.get(url)
-  for (vr in data){
-  if((new RegExp(`\\b${vr}\\b`,'gi')).test(body)) conn.sendMessage(from,{audio: { url : data[vr]},mimetype: 'audio/mpeg',ptt:true},{quoted:mek})   
-  }
-        }                      
-       
         
-//=================================WORKTYPE=========================================== 
+//======HEART REACTIONS =======
+//=======HRT React 
+if (!isReact && senderNumber !== botNumber) {
+    if (config.HEART_REACT === 'true') {
+            const reactions = ['💘', '💝', '💖', '💗', '💓', '💞', '💕', '❣️', '❤️‍🔥', '❤️‍🩹', '❤️', '🩷', '🧡', '💛', '💚', '💙', '🩵', '💜', '🤎', '🖤', '🩶', '🤍'];
+           const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
+        m.react(randomReaction);
+    }
+}
+//=======HEART React 
+if (!isReact && senderNumber === botNumber) {
+    if (config.HEART_REACT === 'true') {
+            const reactions = ['💘', '💝', '💖', '💗', '💓', '💞', '💕', '❣️', '❤️‍🔥', '❤️‍🩹', '❤️', '🩷', '🧡', '💛', '💚', '💙', '🩵', '💜', '🤎', '🖤', '🩶', '🤍'];
+           const randomReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
+        m.react(randomReaction);
+    }
+}        
+//==========WORKTYPE============ 
 if(!isOwner && config.MODE === "private") return
 if(!isOwner && isGroup && config.MODE === "inbox") return
 if(!isOwner && isGroup && config.MODE === "groups") return
-//======================================================
-
-
-
-
-
-        
+ 
+// take commands 
+               
 const events = require('./command')
 const cmdName = isCmd ? body.slice(1).trim().split(" ")[0].toLowerCase() : false;
 if (isCmd) {
@@ -255,10 +274,11 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 
 })
 }
+
 app.get("/", (req, res) => {
-res.send("HEY, AWAIS MD BOT WILL BE STARTED ✅");
+res.send("AWAIS MD STARTED ✅");
 });
-app.listen(port, () => console.log(`Um4d Server listening on port http://localhost:${port}`));
+app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
 connectToWA()
 }, 4000);
