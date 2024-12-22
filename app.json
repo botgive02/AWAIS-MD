@@ -49,6 +49,12 @@
       "value": "true"
     }, 
 
+    "AUTO_TYPING": {
+      "description": "Make it true if you want auto typing.",
+      "required": false,
+      "value": "true"
+    },
+
     "AUTO_STICKER": {
       "description": "Make it true if you want bot auto sticker.",
       "required": true,
@@ -73,10 +79,16 @@
       "value": "true"
     }, 
 
+   "CURRENT_STATUS": {
+      "description": "Make it true if want automatic voice reply .",
+      "required": false,
+      "value": "false"
+    }, 
+
     "FAKE_RECORDING": {
       "description": "Make it true if you want bot fake record.",
       "required": true,
-      "value": "true"
+      "value": "false"
     },
 
     "AUTO_REACT": {
@@ -90,6 +102,12 @@
       "required": true,
       "value": "true"
     
+    }, 
+
+   "ALWAYS_ONLINE": {
+      "description": "Make it true if want automatic voice reply .",
+      "required": false,
+      "value": "true"
     }, 
 
     "BOT_NAME": {
