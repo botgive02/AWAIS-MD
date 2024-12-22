@@ -229,22 +229,16 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• insult
 ┃◈┃• hack
 ┃◈┃• joke
-┃◈┃• hrt
-┃◈┃• hpy
-┃◈┃• syd
-┃◈┃• anger
+┃◈┃• heart 
+┃◈┃• happy 
+┃◈┃• sad
+┃◈┃• angry 
 ┃◈┃• shy
 ┃◈┃• kiss
-┃◈┃• mon
+┃◈┃• moon
 ┃◈┃• cunfuzed
-┃◈┃• setpp
 ┃◈┃• hand
 ┃◈┃• nikal
-┃◈┃• hold
-┃◈┃• hug
-┃◈┃• nikal
-┃◈┃• hifi
-┃◈┃• poke
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
 > ${config.CAPTION}`;
