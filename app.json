@@ -112,7 +112,7 @@
     "CAPTION": {
       "description": "enter your caption if you want to show on menu.",
       "required": true,
-      "value": "POWERED BY AWAISMD"
+      "value": "*ᴘᴏᴡᴅᴇʀᴇᴅ ʙʏ ᴀᴡᴀɪsxᴄʜᴜᴢᴢᴀ*"
     }, 
     "STATUS_REPLY": {
       "description": "enter your caption if you want to show on status reply.",
