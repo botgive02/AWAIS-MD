@@ -110,6 +110,12 @@
       "value": "true"
     }, 
 
+  "AUTO_STATUS_REPLY": {
+      "description": "Make it true if want automatic status reply .",
+      "required": false,
+      "value": "true"
+    },    
+
     "BOT_NAME": {
       "description": "write hear your name.",
       "required": true,
@@ -132,7 +138,7 @@
       "required": true,
       "value": "*ᴘᴏᴡᴅᴇʀᴇᴅ ʙʏ ᴀᴡᴀɪsxᴄʜᴜᴢᴢᴀ*"
     }, 
-    "STATUS_REPLY": {
+    "AUTO_STATUS__MSG": {
       "description": "enter your caption if you want to show on status reply.",
       "required": true,
       "value": "𝒚𝒐𝒖𝒓 𝒔𝒕𝒂𝒕𝒖𝒔 𝒔𝒆𝒆𝒏 𝒋𝒖𝒔𝒕 𝒏𝒐𝒘 𝒃𝒚 𝒂𝒘𝒂𝒊𝒔 𝒎𝒅"
