@@ -1,5 +1,5 @@
 {
-  "name": "AWAIS-MD",
+  "name": "ZiDi-MD",
   "description": "ᴊᴀᴠᴀsᴄʀɪᴘᴛ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴀᴡᴀɪs ᴍᴅ",
   "logo": "https://endpoint.web.id/server/file/8Cmyffly1bMBLr.jpg",
   "keywords": ["bot"],
@@ -8,9 +8,9 @@
     "stack": "container",
   "env": {
     "SESSION_ID": {
-      "description": "Put the session-id here.",
+      "description": "UMAR=UCM1yaxb#9xc5nt73rkhWdtN73fxaq0dfBw0luXgfXU0cwpMl8Vo",
       "required": true,
-      "value": ""
+      "value": "UMAR=UCM1yaxb#9xc5nt73rkhWdtN73fxaq0dfBw0luXgfXU0cwpMl8Vo"
     },  
     
     "ALIVE_IMG": {
@@ -28,13 +28,13 @@
     "PREFIX": {
       "description": "paste your bot prefix note! Don't apply null prefix.",
       "required": true,
-      "value": "."
+      "value": ","
     },
     
     "MODE": {
       "description": "select your bot work type public-private-inbox-group.",
       "required": true,
-      "value": "public"
+      "value": "private"
     }, 
 
     "AUTO_VOICE": {
@@ -45,20 +45,20 @@
 
     "AUTO_REPLY": {
       "description": "Make it true if you want bot auto reply.",
-      "required": true,
-      "value": "true"
+      "required": false,
+      "value": "false"
     }, 
 
     "AUTO_TYPING": {
       "description": "Make it true if you want auto typing.",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
 
     "AUTO_STICKER": {
       "description": "Make it true if you want bot auto sticker.",
-      "required": true,
-      "value": "true"
+      "required": false,
+      "value": "false"
     }, 
 
     "AUTO_READ_STATUS": {
@@ -87,14 +87,14 @@
 
     "FAKE_RECORDING": {
       "description": "Make it true if you want bot fake record.",
-      "required": true,
+      "required": false,
       "value": "false"
     },
 
     "AUTO_REACT": {
       "description": "Make it true if you want bot AutoReact.",
-      "required": true,
-      "value": "true"
+      "required": false,
+      "value": "false"
     },
 
     "OWNER_REACT": {
@@ -112,14 +112,14 @@
 
   "AUTO_STATUS_REPLY": {
       "description": "Make it true if want automatic status reply .",
-      "required": false,
+      "required": true,
       "value": "true"
     },    
 
     "BOT_NAME": {
       "description": "write hear your name.",
       "required": true,
-      "value": "ᴀᴡᴀɪs ᴍᴅ"
+      "value": "ZiDi ᴍᴅ"
     }, 
 
     "HEART_REACT": {
@@ -130,18 +130,18 @@
 
     "READ_MESSAGE": {
       "description": "Make it true if you want bot read your all sms just now.",
-      "required": true,
+      "required": false,
       "value": "false"
     }, 
     "CAPTION": {
       "description": "enter your caption if you want to show on menu.",
       "required": true,
-      "value": "*ᴘᴏᴡᴅᴇʀᴇᴅ ʙʏ ᴀᴡᴀɪsxᴄʜᴜᴢᴢᴀ*"
+      "value": "*ZiDi Md*"
     }, 
     "AUTO_STATUS__MSG": {
       "description": "enter your caption if you want to show on status reply.",
       "required": true,
-      "value": "𝒚𝒐𝒖𝒓 𝒔𝒕𝒂𝒕𝒖𝒔 𝒔𝒆𝒆𝒏 𝒋𝒖𝒔𝒕 𝒏𝒐𝒘 𝒃𝒚 𝒂𝒘𝒂𝒊𝒔 𝒎𝒅"
+      "value": "`👑 𝒚𝒐𝒖𝒓 𝒔𝒕𝒂𝒕𝒖𝒔 𝒔𝒆𝒆𝒏 𝒃𝒚 𝒁𝒊𝑫𝒊 𝑴𝒅 👑`"
     }
 
 
